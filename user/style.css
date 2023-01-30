@@ -1,0 +1,15 @@
+.slider-container {
+  width: 100%;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  position: absolute;
+}
+
+.prev-button, .next-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
