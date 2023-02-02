@@ -1,5 +1,6 @@
 <?php
 include "connect.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -127,6 +128,7 @@ include "connect.php";
       <div class="collapse navbar-collapse" id="navbarScroll">
         <?php
         if (isset($_SESSION['loggedin'])) {
+        
           $user_id = $_SESSION["user_id"];
           $query = "SELECT * FROM userlogin WHERE user_id='$user_id'";
           $result = mysqli_query($con, $query);

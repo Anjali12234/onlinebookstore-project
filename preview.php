@@ -53,9 +53,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                             <p>Published Date: <?php echo $row['publish_date'] ?></p>
                             <hr style="width:600px">
                         </div>
-                        <div>
-                            <p>Geners: <a href=""></a></p>
-                        </div>
+                       
                         <div class=" mt-5">
                             <h2>About the Author</h2>
                             <div class=" row">

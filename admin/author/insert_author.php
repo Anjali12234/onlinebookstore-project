@@ -10,7 +10,7 @@ $sql = "INSERT INTO `author`(`author_name`, `author_description`, `author_image`
 $query = mysqli_query($con,$sql);
 
 if($query){
-    header('location:author.php');
+    header('location:authors.php');
 }
 else{
     echo"Something went wrong";
