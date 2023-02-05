@@ -1,19 +1,22 @@
-<?php
+<?php 
 include "../connect.php";
-$author_name = $_REQUEST['author_name'];
-$description = $_REQUEST['description'];
-$file_name = $_FILES['image']['name'];
-$temp_file = $_FILES['image']['tmp_name'];
-$path = 'img/authors/'.$file_name;
-move_uploaded_file($temp_file,$path);
-$sql = "INSERT INTO `author`(`author_name`, `author_description`, `author_image`) VALUES ('$author_name','$description','$path')";
-$query = mysqli_query($con,$sql);
 
-if($query){
-    header('location:authors.php');
+$name = $_POST['author_name'];
+$des = $_POST['description'];
+$file_name = $_FILES['image']['name'];
+$temp_file=$_FILES['image']['tmp_name'];
+$path="img/authors/".$file_name;
+move_uploaded_file($temp_file,$path);
+$sql="INSERT INTO `author`(`author_name`, `author_image`, `author_description`) VALUES ('$name','$path','$des')";
+
+if (mysqli_query($con, $sql)) {
+    header('location:author.php');
+
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($con);
 }
-else{
-    echo"Something went wrong";
-}
+
+// Close connection
+mysqli_close($con);
 
 ?>

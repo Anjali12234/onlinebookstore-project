@@ -31,12 +31,12 @@ include "header.php";
                         <input type="file" name="img" class="form-control">
                     </div>
                 </div>
-                <!-- <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="form-group">
                         <strong>Book Pdf:</strong>
                         <input type="file" name="pdf" class="form-control">
                     </div>
-                </div> -->
+                </div>
 
             </div>
             <div class="row">

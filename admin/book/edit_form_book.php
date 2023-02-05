@@ -30,6 +30,7 @@ $row = mysqli_fetch_assoc($result);
         <form action="update_book.php" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="edit_id" value="<?= $row['id']; ?>">
             <input type="hidden" name="old_image" value="<?= $row['book_image']; ?>">
+            <input type="hidden" name="old_pdf" value="<?= $row['book_pdf']; ?>">
 
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-6">
@@ -40,10 +41,11 @@ $row = mysqli_fetch_assoc($result);
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="form-group">
-                        <strong>Description:</strong>
-                        <textarea type="text" name="description" class="form-control" placeholder="Write about book"><?= $row['description']; ?></textarea>
+                        <strong>Book Pdf:</strong>
+                        <input type="file" name="pdf" class="form-control">
                     </div>
                 </div>
+               
             </div>
 
             <div class="row">
@@ -88,6 +90,12 @@ $row = mysqli_fetch_assoc($result);
 
             </div>
             <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="form-group">
+                        <strong>Description:</strong>
+                        <textarea type="text" name="description" class="form-control" placeholder="Write about book"><?= $row['description']; ?></textarea>
+                    </div>
+                </div>
 
 
                 <div class="col-xs-12 col-sm-6 col-md-6">

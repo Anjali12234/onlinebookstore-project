@@ -68,6 +68,37 @@ include "connect.php";
     .show {
       display: block;
     }
+    body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  padding: 20px;
+}
   </style>
 </head>
 
@@ -143,7 +174,7 @@ include "connect.php";
            </li>
 
             <li class="nav-item">
-              <h5> <a class="nav-link active">Contact</a></h5>
+              <h5> <a class="nav-link active " href="contact.php">Contact</a></h5>
             </li>
           </ul>
         <?php
@@ -157,7 +188,7 @@ include "connect.php";
           </li> -->
 
           <li class="nav-item">
-            <h5> <a class="nav-link active">Contact</a></h5>
+            <h5> <a class="nav-link active href="contact.php">Contact</a></h5>
           </li>
         </ul>';
         }

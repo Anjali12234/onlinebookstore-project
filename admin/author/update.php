@@ -23,6 +23,6 @@ $query=mysqli_query($con,$update_book);
 if($query){
     header('location:authors.php');    
 }else{
-    echo "File not Updated";
+    echo "Error: " . $update_book . "<br>" . mysqli_error($con);
 }
 ?>

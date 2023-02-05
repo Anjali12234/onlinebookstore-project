@@ -53,6 +53,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                             <p>Published Date: <?php echo $row['publish_date'] ?></p>
                             <hr style="width:600px">
                         </div>
+                     
                        
                         <div class=" mt-5">
                             <h2>About the Author</h2>
@@ -70,10 +71,13 @@ while ($row = mysqli_fetch_assoc($result)) {
                             </div>
                             <hr style="width:600px">
                         </div>
+                   
                     </div>
                     <div class="col-md-4 ">
-                        <iframe frameborder="0" scrolling="no" style="border:0px" src="https://books.google.com.np/books?id=c3wrDQAAQBAJ&lpg=PP4&dq=snowwhite&pg=PP4&output=embed" width=450 height=500></iframe>
-                    </div>
+                      
+                      <embed type="application/pdf" src="admin/book/pdf/<?php echo $row['book_pdf'] ?>" width=450 height=500>
+                  </div>
+                   
 
                 </div>
             </div>
